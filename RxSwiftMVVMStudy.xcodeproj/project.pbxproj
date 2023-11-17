@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0524062B074DA4002BAB11 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0524052B074DA4002BAB11 /* Kingfisher */; };
+		5C0524082B075270002BAB11 /* NormalCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0524072B075270002BAB11 /* NormalCarouselCollectionViewCell.swift */; };
 		9C411B332B0272AE00237D51 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C411B322B0272AE00237D51 /* Item.swift */; };
 		9C411B352B02734700237D51 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C411B342B02734700237D51 /* BannerCollectionViewCell.swift */; };
 		9C411B382B0274E000237D51 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C411B372B0274E000237D51 /* SnapKit */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0524072B075270002BAB11 /* NormalCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C411B322B0272AE00237D51 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9C411B342B02734700237D51 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C501AA72AF93B7F006C2730 /* RxSwiftMVVMStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftMVVMStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0524062B074DA4002BAB11 /* Kingfisher in Frameworks */,
 				9C411B382B0274E000237D51 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +118,7 @@
 				9C501AB82AF93B81006C2730 /* Info.plist */,
 				9C411B322B0272AE00237D51 /* Item.swift */,
 				9C411B342B02734700237D51 /* BannerCollectionViewCell.swift */,
+				5C0524072B075270002BAB11 /* NormalCarouselCollectionViewCell.swift */,
 			);
 			path = RxSwiftMVVMStudy;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			name = RxSwiftMVVMStudy;
 			packageProductDependencies = (
 				9C411B372B0274E000237D51 /* SnapKit */,
+				5C0524052B074DA4002BAB11 /* Kingfisher */,
 			);
 			productName = RxSwiftMVVMStudy;
 			productReference = 9C501AA72AF93B7F006C2730 /* RxSwiftMVVMStudy.app */;
@@ -228,6 +234,7 @@
 			mainGroup = 9C501A9E2AF93B7F006C2730;
 			packageReferences = (
 				9C411B362B0274E000237D51 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5C0524042B074DA3002BAB11 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9C501AA82AF93B7F006C2730 /* Products */;
 			projectDirPath = "";
@@ -275,6 +282,7 @@
 				9C411B332B0272AE00237D51 /* Item.swift in Sources */,
 				9C501AAF2AF93B7F006C2730 /* ViewController.swift in Sources */,
 				9C501AAB2AF93B7F006C2730 /* AppDelegate.swift in Sources */,
+				5C0524082B075270002BAB11 /* NormalCarouselCollectionViewCell.swift in Sources */,
 				9C411B352B02734700237D51 /* BannerCollectionViewCell.swift in Sources */,
 				9C501AAD2AF93B7F006C2730 /* SceneDelegate.swift in Sources */,
 			);
@@ -625,6 +633,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C0524042B074DA3002BAB11 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 		9C411B362B0274E000237D51 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -636,6 +652,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C0524052B074DA4002BAB11 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C0524042B074DA3002BAB11 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		9C411B372B0274E000237D51 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9C411B362B0274E000237D51 /* XCRemoteSwiftPackageReference "SnapKit" */;
