@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
         collectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: BannerCollectionViewCell.id)
         collectionView.register(NormalCarouselCollectionViewCell.self, forCellWithReuseIdentifier: NormalCarouselCollectionViewCell.id)
+        collectionView.register(ListCarouselCollectionViewCell.self, forCellWithReuseIdentifier: ListCarouselCollectionViewCell.id)
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         setDataSource()
         setSnapShot()
@@ -42,7 +43,8 @@ class ViewController: UIViewController {
                 return self?.createBannerSection()
             case 1:
                 return self?.createNormalCarouselSection()
-//            case 2:
+            case 2:
+                return self?.createListCarouselSection()
             default:
                 return self?.createBannerSection()
             }
@@ -68,9 +70,21 @@ class ViewController: UIViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(180))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        section.orthogonalScrollingBehavior = .continuous
+        return section
+    }
+    
+    private func createListCarouselSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(250))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 3)
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         section.orthogonalScrollingBehavior = .continuous
@@ -87,6 +101,10 @@ class ViewController: UIViewController {
                 return cell
             case .normalCarousel(let item):
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCarouselCollectionViewCell.id, for: indexPath) as? NormalCarouselCollectionViewCell else { return UICollectionViewCell() }
+                cell.config(imageUrl: item.imageUrl, title: item.title, subTitle: item.subTitle)
+                return cell
+            case .listCarousel(let item):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCarouselCollectionViewCell.id, for: indexPath) as? ListCarouselCollectionViewCell else { return UICollectionViewCell()}
                 cell.config(imageUrl: item.imageUrl, title: item.title, subTitle: item.subTitle)
                 return cell
             default:
@@ -120,6 +138,17 @@ class ViewController: UIViewController {
         ]
         snapshot.appendItems(normalItems, toSection: normalSection)
         
+        let listSection = Section(id: "ListCarousel")
+        snapshot.appendSections([listSection])
+        let listItems = [
+            Item.listCarousel(HomeItem(title: "교촌 치킨", subTitle: "간장 치킨", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "굽네 치킨", subTitle: "간장 치킨", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "푸라닭 치킨", subTitle: "간장 치킨", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "교촌2 치킨", subTitle: "간장 치킨", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "교촌3 치킨", subTitle: "간장 치킨", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "교촌4 치킨", subTitle: "간장 치킨", imageUrl: imageUrl))
+        ]
+        snapshot.appendItems(listItems, toSection: listSection)
         dataSource?.apply(snapshot)
     }
 }
