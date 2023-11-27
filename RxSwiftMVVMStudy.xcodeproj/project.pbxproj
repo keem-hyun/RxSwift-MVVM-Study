@@ -29,6 +29,7 @@
 		9C501AC22AF93B82006C2730 /* RxSwiftMVVMStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C501AC12AF93B82006C2730 /* RxSwiftMVVMStudyTests.swift */; };
 		9C501ACC2AF93B82006C2730 /* RxSwiftMVVMStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C501ACB2AF93B82006C2730 /* RxSwiftMVVMStudyUITests.swift */; };
 		9C501ACE2AF93B82006C2730 /* RxSwiftMVVMStudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C501ACD2AF93B82006C2730 /* RxSwiftMVVMStudyUITestsLaunchTests.swift */; };
+		9CB20B8A2B146AE500201429 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB20B892B146AE500201429 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		9C501AC72AF93B82006C2730 /* RxSwiftMVVMStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftMVVMStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C501ACB2AF93B82006C2730 /* RxSwiftMVVMStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMVVMStudyUITests.swift; sourceTree = "<group>"; };
 		9C501ACD2AF93B82006C2730 /* RxSwiftMVVMStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMVVMStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CB20B892B146AE500201429 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				9C501AAA2AF93B7F006C2730 /* AppDelegate.swift */,
 				9C501AAC2AF93B7F006C2730 /* SceneDelegate.swift */,
 				9C501AAE2AF93B7F006C2730 /* ViewController.swift */,
+				9CB20B892B146AE500201429 /* ButtonView.swift */,
 				9C501AB02AF93B7F006C2730 /* Main.storyboard */,
 				9C501AB32AF93B81006C2730 /* Assets.xcassets */,
 				9C501AB52AF93B81006C2730 /* LaunchScreen.storyboard */,
@@ -323,6 +326,7 @@
 			files = (
 				9C411B4C2B09FD5000237D51 /* MovieResult.swift in Sources */,
 				9C501AAF2AF93B7F006C2730 /* ViewController.swift in Sources */,
+				9CB20B8A2B146AE500201429 /* ButtonView.swift in Sources */,
 				9C411B4E2B0A468E00237D51 /* Network.swift in Sources */,
 				9C411B502B0A4B7C00237D51 /* TVNetwork.swift in Sources */,
 				9C501AAB2AF93B7F006C2730 /* AppDelegate.swift in Sources */,
