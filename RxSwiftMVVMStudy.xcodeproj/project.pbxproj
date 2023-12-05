@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C0524062B074DA4002BAB11 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0524052B074DA4002BAB11 /* Kingfisher */; };
+		9C0928D82B1F1E7500AB01A3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0928D72B1F1E7500AB01A3 /* ViewModel.swift */; };
 		9C411B382B0274E000237D51 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C411B372B0274E000237D51 /* SnapKit */; };
 		9C411B3D2B09F41D00237D51 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9C411B3C2B09F41D00237D51 /* RxCocoa */; };
 		9C411B3F2B09F41D00237D51 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9C411B3E2B09F41D00237D51 /* RxSwift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0928D72B1F1E7500AB01A3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9C411B442B09F60700237D51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C411B472B09F85900237D51 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
 		9C411B492B09FC2B00237D51 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				9C501AB32AF93B81006C2730 /* Assets.xcassets */,
 				9C501AB52AF93B81006C2730 /* LaunchScreen.storyboard */,
 				9C501AB82AF93B81006C2730 /* Info.plist */,
+				9C0928D72B1F1E7500AB01A3 /* ViewModel.swift */,
 			);
 			path = RxSwiftMVVMStudy;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				9C411B4E2B0A468E00237D51 /* Network.swift in Sources */,
 				9C411B502B0A4B7C00237D51 /* TVNetwork.swift in Sources */,
 				9C501AAB2AF93B7F006C2730 /* AppDelegate.swift in Sources */,
+				9C0928D82B1F1E7500AB01A3 /* ViewModel.swift in Sources */,
 				9C411B522B0A4C9C00237D51 /* MovieNetwork.swift in Sources */,
 				9C411B4A2B09FC2B00237D51 /* Movie.swift in Sources */,
 				9C411B542B0A4D9700237D51 /* NetworkProvider.swift in Sources */,
